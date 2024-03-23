@@ -1,0 +1,85 @@
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+
+an = int(input('Enter an: '))
+crt = int(input('Enter crt: '))
+
+if an%4!=0:
+    if crt>=1 and crt<=31:
+        l=1
+        zi=crt
+    if crt>=32 and crt<=59:
+        l=2
+        zi=crt-32+1
+    if crt>=60 and crt<=90:
+        l=3
+        zi=crt-60+1
+    if crt>=91 and crt<=120:
+        l=4
+        zi=crt-91+1
+    if crt>=121 and crt<=151:
+        l=5
+        zi=crt-121+1
+    if crt>=152 and crt<=181:
+        l=6
+        zi=crt-152+1
+    if crt>=182 and crt<=212:
+        l=7
+        zi=crt-182+1
+    if crt>=213 and crt<=243:
+        l=8
+        zi=crt-213+1
+    if crt>=244 and crt<=273:
+        l=9
+        zi=crt-244+1
+    if crt>=274 and crt<=304:
+        l=10
+        zi=crt-274+1
+    if crt>=305 and crt<=334:
+        l=11
+        zi=crt-305+1
+    if crt>=335 and crt<=365:
+        l=12
+        zi=crt-335+1
+else:
+    if crt>=1 and crt<=31:
+        l=1
+        zi=crt
+    if crt>=32 and crt<=60:
+        l=2
+        zi=crt-32+1
+    if crt>=61 and crt<=91:
+        l=3
+        zi=crt-61+1
+    if crt>=92 and crt<=121:
+        l=4
+        zi=crt-92+1
+    if crt>=122 and crt<=152:
+        l=5
+        zi=crt-122+1
+    if crt>=153 and crt<=182:
+        l=6
+        zi=crt-153+1
+    if crt>=183 and crt<=213:
+        l=7
+        zi=crt-183+1
+    if crt>=214 and crt<=244:
+        l=8
+        zi=crt-214+1
+    if crt>=245 and crt<=274:
+        l=9
+        zi=crt-245+1
+    if crt>=275 and crt<=305:
+        l=10
+        zi=crt-275+1
+    if crt>=306 and crt<=335:
+        l=11
+        zi=crt-306+1 
+    if crt>=336 and crt<=366:
+        l=12
+        zi=crt-336+1
+print (zi)
+print (l)
+print (an)
+    
+    
