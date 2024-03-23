@@ -1,0 +1,27 @@
+def check(x,y):
+        freqX = [0] * 10
+        freqY = [0] * 10 
+        while x!=0:
+            freqX[x%10]=1
+            x=int(x/10)
+        while y!=0:
+            freqY[y%10]=1
+            y=int(y/10)
+        for i in range (0,10):
+            if freqX!=freqY:
+                return 0
+        return 1
+        
+def test_check():
+    input.any=[1112,12,21,345,123]
+    result.any=check(n,input.any)
+    assert result.any==[1112,12,21]
+def test_check2():
+    assert check(5,1112,12,21,345,123)==[1112,12,21]
+    
+    
+    
+    
+    
+
+    

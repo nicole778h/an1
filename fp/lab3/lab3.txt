@@ -1,0 +1,63 @@
+
+p=int(input ('Enter 1 for first exercise or enter 2 for the second one or enter 3 for the third one'))
+n = int(input('Enter n'))
+a=[]
+print(len(a))
+for i in range (0,n):
+    nr=int (input('enter nr'))
+    a.append(nr)
+print (a)
+v = [0] * n
+
+v[0] = 1 # lungimea maxima a unei secvente buna ce se termina pe pozitia i
+maxs = 1 # lungimea maxima 
+crt = 0 # unde se termina o secventa
+
+if p==1:
+    for i in range(1, n):
+       v[i] = 1
+       if ((a[i - 1] < 0) & (a[i] > 0)) | ((a[i - 1] > 0) & (a[i] < 0)):
+           v[i] = v[i - 1] + 1
+       if maxs < v[i]:
+           maxs = v[i]
+           crt = i
+
+    for i in range (crt-maxs+1, crt+1):
+        print (a[i], end=' ')
+if p==2:
+    def check(x,y):
+        freqX = [0] * 10 # vector de frecventa pentru cifrele numarului X
+        freqY = [0] * 10 # la fel pentru y
+        while x!=0:
+            freqX[x%10]=1
+            x=int(x/10)
+        while y!=0:
+            freqY[y%10]=1
+            y=int(y/10)
+        cntCommon=0
+        for i in range (0,10):
+            if freqX!=freqY:
+                return 0
+        return 1
+    for i in range(1,n):
+        v[i]=1
+        if check(a[i-1],a[i]):
+            v[i]=v[i-1]+1
+        if maxs<v[i]:
+            maxs=v[i]
+            crt=i
+    for i in range (crt-maxs+1, crt+1):
+        print (a[i], end=' ')
+if p==3:
+    for i in range(1, n):
+       v[i] = 1
+       if a[i-1]==a[i]:
+           v[i] = v[i - 1] + 1
+       if maxs < v[i]:
+           maxs = v[i]
+           crt = i
+    for i in range (crt-maxs+1, crt+1):
+        print (a[i], end=' ')
+    
+    
+   
